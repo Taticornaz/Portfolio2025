@@ -1,0 +1,97 @@
+<section id="typing-effect" class="section fiche-technique">
+    <h2 class="gradient-text">Effet de texte animé</h2>
+
+    <h3>Animation de texte dynamique</h3>
+
+    <h3>Définition concise</h3>
+    <p>
+        Cet effet utilise JavaScript pour afficher des textes qui se tapent automatiquement et se suppriment pour afficher le texte suivant. 
+        Il permet de dynamiser la page d'accueil en affichant plusieurs rôles ou titres de manière animée.
+    </p>
+
+    <h3>Contexte d'utilisation</h3>
+    <p>
+        L'effet de texte animé est utile pour : 
+        <ul>
+            <li>Présenter différents rôles ou compétences de manière interactive</li>
+            <li>Attirer l'attention sur la page d'accueil</li>
+            <li>Créer un effet moderne sans frameworks externes</li>
+        </ul>
+    </p>
+
+    <h3>Exemple de code commenté</h3>
+    <pre><code>
+// Liste des textes à afficher
+const texts = ["Frontend Developer", "Web Designer", "Creative Coder"];
+let count = 0;       // index du texte courant
+let index = 0;       // index de la lettre courante
+let currentText = "";
+let deleting = false; // état : suppression ou saisie
+
+function type() {
+    currentText = texts[count];
+
+    if (!deleting) {
+        // Ajouter une lettre
+        document.querySelector(".typing-text").textContent = currentText.slice(0, index + 1);
+        index++;
+
+        // Si le mot est complet, attendre puis supprimer
+        if (index === currentText.length) {
+            deleting = true;
+            setTimeout(type, 1500);
+            return;
+        }
+    } else {
+        // Supprimer une lettre
+        document.querySelector(".typing-text").textContent = currentText.slice(0, index - 1);
+        index--;
+
+        // Si tout est supprimé, passer au texte suivant
+        if (index === 0) {
+            deleting = false;
+            count = (count + 1) % texts.length;
+        }
+    }
+
+    // Vitesse de frappe et suppression
+    setTimeout(type, deleting ? 50 : 120);
+}
+
+type();
+    </code></pre>
+
+    <h3>Cas d'usage réel</h3>
+    <p>
+        Dans mon portfolio, j'ai utilisé cet effet pour : 
+        <ul>
+            <li>Afficher "Frontend Developer", "Web Designer" et "Creative Coder" sur la page d'accueil</li>
+            <li>Dynamiser le header et attirer l'attention de l'utilisateur</li>
+        </ul>
+    </p>
+
+    <h3>Pièges à éviter</h3>
+    <p>
+        <ul>
+            <li>Bien gérer les délais entre la saisie et la suppression</li>
+            <li>Veiller à ce que la classe ciblée dans le HTML corresponde à celle du script</li>
+            <li>Éviter de surcharger la page avec trop d'effets similaires</li>
+        </ul>
+    </p>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        Cet effet a rendu ma page d'accueil plus vivante et professionnelle. 
+        J'ai appris à manipuler les chaînes de caractères et le DOM de manière simple et efficace. 
+        Il est facile à personnaliser et améliore l'expérience utilisateur.J'apprécie cette technique car elle rend le site plus vivant et met en valeur mes différentes compétences. 
+        Elle permet également d'attirer l'attention de l'utilisateur sans utiliser trop de JavaScript complexe.
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">MDN - JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/js/js_timing.asp" target="_blank">W3Schools - setTimeout</a></li>
+        </ul>
+    </p>
+</section>
