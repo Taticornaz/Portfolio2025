@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Prata&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2 class="logo">MyPortfolio</h2>
+    <nav class="nav">
+        <a class="item" href="#home">Home</a>
+        <a class="item" href="#about">About</a>
+        <a class="item" href="#projects">Projects</a>
+        <a class="item" href="#contact">Contact</a>
+    </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1  class="gradient-text">Hello, I’m <span>Tatiana</span></h1>
+        <p>I am <span class="typing-text"></span></p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+        <h2  class="gradient-text">About me</h2>
+        <p>
+            I’m learning frontend development and building modern websites
+            using HTML, CSS and JavaScript.
+        </p>
+
+        <div class="container-block-about-me">
+   
+    <div class="block-header">
+      <p>Thank you for visiting my website! My name is Tatiana and I'm a new web developer based in Switzerland.</p> 
+    </div>
+
+    
+    <div class="block-text-about-me"> 
+      <img class="star" src="https://cdn.glitch.global/39ed6ded-5ac8-479c-a3c1-e669ec288eb3/star.jpg?v=1718179499575" alt="Star" width="6%">
+      <p class="par-about-me">I'm passionate about creating something nice and functional. Although I'm just starting my career and it makes me excited to learn and grow my skillset.</p>
+    </div>
+
+  
+    <div class="block-text-about-me"> 
+      <img class="star" src="https://cdn.glitch.global/39ed6ded-5ac8-479c-a3c1-e669ec288eb3/star.jpg?v=1718179499575" alt="Star" width="6%">
+      <p class="par-about-me">I have a strong foundation in HTML, CSS, JavaScript and I am currently learning React, Redux, Node.</p>
+    </div>
+
+  
+    <div class="block-text-about-me"> 
+      <img class="star" src="https://cdn.glitch.global/39ed6ded-5ac8-479c-a3c1-e669ec288eb3/star.jpg?v=1718179499575" alt="Star" width="6%">
+      <p class="par-about-me">Please take a moment to check out my portfolio and leave your thoughts and feedback!</p>
+    </div>
+
+  </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+        <h2  class="gradient-text">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Project One</h3>
+                <p>HTML / CSS</p>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Project Two</h3>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Project Three</h3>
+                <p>React</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+ <section id="contact" class="section contact">
+    <h2 class="gradient-text">Contact</h2>
+
+    <form action="https://formspree.io/f/xpzvzzev" method="POST" class="contact-form">
+        <input type="hidden" name="_format" value="json">
+
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send</button>
+    </form>
+</section>
+
+
+
+</main>
+<script src="index.js"></script>
+</body>
+</html>
