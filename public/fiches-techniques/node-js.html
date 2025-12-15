@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serveur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section id="node-vs-live-server" class="section fiche-technique">
+    <h2 class="gradient-text">Node.js vs Live Server</h2>
+
+    <h3>Serveur de développement : comparaison</h3>
+
+    <h3>Définition concise</h3>
+    <p>
+        <strong>Live Server</strong> et <strong>Node.js</strong> sont deux outils utilisés pour
+        exécuter et tester des projets web en local, mais ils n’ont pas le même objectif.
+        Live Server sert principalement à afficher des fichiers HTML/CSS/JavaScript statiques,
+        tandis que Node.js permet de créer un véritable serveur backend capable de gérer
+        des requêtes, des données et une logique serveur.
+    </p>
+
+    <h3>Exemple de code commenté</h3>
+
+    <h4>Node.js – serveur réel utilisé dans mon projet</h4>
+    <pre><code>
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+// Servir les fichiers statiques du dossier public
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+
+// Lancer le serveur
+app.listen(port, () => {
+    console.log(`Serveur lancé sur http://localhost:${port}`);
+});
+    </code></pre>
+
+    <p>
+        Ce serveur Node.js me permet de lancer mon projet réel depuis la
+        <code>public</code> folder et d'utiliser Bootstrap. Ainsi, je peux
+        tester toutes les pages et fonctionnalités localement, comme le portfolio,
+        le formulaire de contact et les animations.
+    </p>
+
+    <h3>Cas d'usage réel</h3>
+    <ul>
+        <li>Live Server : pour des tests rapides du HTML/CSS et ajustements visuels.</li>
+        <li>Node.js : pour exécuter le projet complet avec fichiers statiques, Bootstrap et préparation pour le backend.</li>
+    </ul>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        Au début, je pensais que Live Server et Node.js faisaient la même chose car ils
+        permettent tous les deux d’afficher un site en local. En pratiquant, j’ai compris
+        que Live Server est un outil de confort pour le front-end, tandis que Node.js est
+        une technologie fondamentale pour le développement backend.
+    </p>
+    <p>
+        Cette distinction m’a aidée à mieux séparer les responsabilités entre le client
+        et le serveur. Pour mes projets actuels, je privilégie Live Server pour la phase
+        de design et d’intégration, et Node.js pour les fonctionnalités avancées.
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <ul>
+        <li>
+            <a href="https://nodejs.org/en/docs" target="_blank">
+                Documentation officielle Node.js
+            </a>
+        </li>
+        <li>
+            <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">
+                VS Code Live Server Extension
+            </a>
+        </li>
+    </ul>
+</section>
+</body>
+</html>

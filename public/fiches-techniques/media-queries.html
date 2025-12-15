@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="media-queries" class="section fiche-technique">
+    <h2 class="gradient-text">Media Queries</h2>
+
+    <h3>Définition concise</h3>
+    <p>
+        Les media queries sont une fonctionnalité CSS qui permet d'adapter le style des pages 
+        web en fonction des caractéristiques de l'appareil, comme la largeur de l'écran, la résolution ou l'orientation.
+    </p>
+
+    <h3>Contexte d'utilisation</h3>
+    <p>
+        Utilisez les media queries pour : 
+        <ul>
+            <li>Créer des sites responsives adaptés à tous les écrans (mobiles, tablettes, desktop)</li>
+            <li>Modifier la disposition, la taille de texte ou des images selon la taille de l'écran</li>
+            <li>Améliorer l'expérience utilisateur sans modifier le HTML</li>
+        </ul>
+    </p>
+
+    <h3>Exemple de code commenté</h3>
+    <pre><code>
+/* Styles généraux */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Media Query pour les écrans ≤ 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* passe les éléments en colonne sur mobile */
+        gap: 10px;              /* réduit l'espacement */
+    }
+}
+    </code></pre>
+
+    <h3>Cas d'usage réel</h3>
+    <p>
+        Dans mon portfolio, j'ai utilisé les media queries pour : 
+        <ul>
+            <li>Réduire la taille des images et du texte sur mobile</li>
+            <li>Passer la navigation de sidebar à barre horizontale</li>
+            <li>Repositionner les sections “About me” et “Projects” pour mobile</li>
+        </ul>
+    </p>
+
+    <h3>Pièges à éviter</h3>
+    <p>
+        <ul>
+            <li>Ne pas surcharger le CSS avec trop de media queries</li>
+            <li>Tester sur différents appareils pour vérifier le rendu</li>
+            <li>Préférer les breakpoints standard (480px, 768px, 1024px) pour plus de cohérence</li>
+        </ul>
+    </p>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        Les media queries m'ont permis de rendre mon portfolio accessible et lisible sur tous les écrans. 
+        Avant de les utiliser, mon site était très bien sur desktop mais illisible sur mobile. 
+        Grâce à elles, je peux ajuster la mise en page et le design sans toucher au HTML.
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Media_Queries" target="_blank">MDN Web Docs - Media Queries</a></li>
+            <li><a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/" target="_blank">CSS-Tricks - Guide complet sur les media queries</a></li>
+        </ul>
+    </p>
+</section>
+</body>
+</html>

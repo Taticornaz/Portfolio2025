@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<section id="flexbox" class="section fiche-technique">
+    <h2 class="gradient-text">Flexbox</h2>
+
+    <h3>Flexbox pour la mise en page responsive</h3>
+    
+
+    <h3>Définition concise</h3>
+    <p>
+        Flexbox (Flexible Box Layout) est un module CSS qui permet de disposer facilement les éléments dans un conteneur. 
+        Il simplifie l'alignement, la répartition de l'espace et la création de mises en page adaptatives sans utiliser 
+        les anciennes techniques comme float ou position absolue.
+    </p>
+
+    <h3>Contexte d'utilisation</h3>
+    <p>
+        Flexbox est particulièrement utile pour : 
+        <ul>
+            <li>Créer des barres de navigation horizontales ou verticales</li>
+            <li>Aligner et centrer des éléments horizontalement et verticalement</li>
+            <li>Créer des grilles de projets responsives</li>
+            <li>Modifier l'ordre visuel des éléments sans changer le HTML</li>
+        </ul>
+    </p>
+
+    <h3>Exemple de code commenté</h3>
+    <pre><code>
+/* Conteneur Flexbox */
+.container {
+    display: flex;           /* transforme le conteneur en flex */
+    justify-content: center; /* alignement horizontal */
+    align-items: center;     /* alignement vertical */
+    gap: 20px;               /* espace entre les éléments */
+}
+
+/* Bloc à l'intérieur du conteneur */
+.item {
+    flex: 1;                 /* chaque bloc prend un espace égal */
+    padding: 20px;
+    background-color: #5f86cd;
+    color: white;
+    border-radius: 8px;
+}
+    </code></pre>
+
+    <h3>Cas d'usage réel</h3>
+    <p>
+        Dans mon portfolio, j'ai utilisé Flexbox pour : 
+        <ul>
+            <li>La barre de navigation principale</li>
+            <li>La grille de projets sur la page d'accueil</li>
+            <li>Le bloc “About me” avec icônes et texte</li>
+        </ul>
+    </p>
+
+    <h3>Pièges à éviter</h3>
+    <p>
+        <ul>
+            <li>Ne pas confondre <code>justify-content</code> (axe principal) et <code>align-items</code> (axe secondaire)</li>
+            <li>Vérifier que les conteneurs flex imbriqués ne perturbent pas la mise en page</li>
+            <li>Éviter de surcharger un conteneur avec trop de propriétés flex</li>
+        </ul>
+    </p>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        Flexbox a beaucoup simplifié mon travail de mise en page. 
+        Je n'utilise plus <code>float</code> ni <code>position: absolute</code> pour créer des grilles ou centrer des blocs. 
+        J'apprécie particulièrement la facilité d'adaptation aux écrans différents. 
+        Je recommande de commencer par de petits exemples avant de combiner plusieurs propriétés.
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_flexible_box_layout" target="_blank">MDN Web Docs - CSS Flexible Box Layout</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks - A Complete Guide to Flexbox</a></li>
+        </ul>
+    </p>
+</section>
