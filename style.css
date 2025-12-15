@@ -170,5 +170,20 @@ button:hover {
         font-size: 40px;
     }
 }
+ /* curseur*/
+ .typing-text {
+    border-right: 2px solid #149ddd; 
+    padding-right: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
- 
+
+@keyframes blink {
+    0%, 50%, 100% { border-color: #149ddd; }
+    25%, 75% { border-color: transparent; }
+}
+
+.typing-text {
+    animation: blink 0.7s infinite;
+}
