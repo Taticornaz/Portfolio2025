@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+
+<section id="architecture-frontend" class="section fiche-technique">
+    <h2 class="gradient-text">Architecture Front-End</h2>
+
+    <h3>Définition concise</h3>
+    <p>
+        L'architecture front-end désigne la manière dont le code HTML, CSS et JavaScript est organisé pour construire un site web maintenable, 
+        évolutif et lisible. Elle permet de séparer les responsabilités, de faciliter la réutilisation et d'assurer une structure logique.
+    </p>
+
+    <h3>Contexte d'utilisation</h3>
+    <p>
+        Une bonne architecture front-end est essentielle pour :
+        <ul>
+            <li>Gérer des projets complexes avec plusieurs pages ou composants</li>
+            <li>Faciliter les modifications et l’ajout de nouvelles fonctionnalités</li>
+            <li>Assurer la cohérence visuelle et fonctionnelle sur tout le site</li>
+            <li>Optimiser la performance et le temps de chargement</li>
+        </ul>
+    </p>
+
+    <h3>Exemple de structure de projet</h3>
+    <pre><code>
+Portfolio2025/
+├─ public/
+│  ├─ assets/             # Images
+│  ├─ fiche-technique/    # Fiches techniques
+│  ├─ projets/          # Projets exemple
+│  ├─ reflexion/          # Réflexions personnelles
+│  ├─ index.html
+│  ├─ index.js
+│  └─ style.css
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+├─ README.md
+└─ server.js
+    </code></pre>
+
+    <h3>Bonnes pratiques</h3>
+    <p>
+        <ul>
+            <li>Utiliser des dossiers séparés pour HTML, CSS, JS, images et fiches</li>
+            <li>Nommer les fichiers et classes de manière cohérente</li>
+            <li>Structurer le code HTML avec des balises sémantiques (header, nav, main, section, footer)</li>
+            <li>Garder le JavaScript modulable et indépendant du HTML lorsque possible</li>
+            <li>Utiliser Flexbox et Grid pour la mise en page responsive</li>
+        </ul>
+    </p>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        En créant mon portfolio, j'ai compris qu'une bonne architecture front-end simplifie énormément la maintenance. 
+        Par exemple, en séparant les fiches techniques et les projets dans des dossiers distincts, je peux ajouter de nouvelles pages 
+        sans toucher aux autres fichiers. L'utilisation des balises sémantiques et de Flexbox/Grid rend mon code plus lisible et plus facile à adapter pour le responsive.
+    </p>
+
+    <h3>Pièges à éviter</h3>
+    <p>
+        <ul>
+            <li>Mettre tout le code HTML, CSS et JS dans un seul fichier pour de gros projets</li>
+            <li>Nommer les classes de façon vague ou incohérente</li>
+            <li>Ne pas séparer les responsabilités entre structure (HTML), style (CSS) et comportement (JS)</li>
+        </ul>
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files" target="_blank">Architecture Front-End</a></li>
+            <li><a href="https://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank">Organizing CSS and JS</a></li>
+        </ul>
+    </p>
+</section>
