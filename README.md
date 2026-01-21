@@ -27,16 +27,16 @@ Ce projet sert de vitrine de mon apprentissage en développement web front-end e
 * Découvrir l'environnement Node.js et npm.
 
 ## Tech Stack
-**Client :** HTML, CSS, React, Redux, TailwindCSS  
-**Server :** Node v14, Express
+**Client :** HTML5, CSS3 (Flexbox, Grid), JavaScript 
+**Server :** Node v13, Express
 
 ## Installation
 Installer le projet localement avec npm :
 
 ```bash
 git clone https://github.com/tatia/Portfolio2025.git
-npm install Portfolio2025
-cd Portfolio2025
+cd Portfolio202
+npm install 
 npm run start
 
 ``` 
