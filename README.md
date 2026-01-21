@@ -35,7 +35,7 @@ Installer le projet localement avec npm :
 
 ```bash
 git clone https://github.com/tatia/Portfolio2025.git
-cd Portfolio202
+cd Portfolio2025
 npm install 
 npm run start
 
