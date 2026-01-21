@@ -61,28 +61,30 @@
     <p>
         Dans mon portfolio, j'ai utilisé Flexbox pour : 
         <ul>
-            <li>La barre de navigation principale</li>
-            <li>La grille de projets sur la page d'accueil</li>
-            <li>Le bloc “About me” avec icônes et texte</li>
+            <li>La barre de navigation (sidebar) : les liens sont alignés verticalement avec <code>display: flex; flex-direction: column;</code></li>
+            <li>La grille de projets sur la page d'accueil : chaque carte projet est un <code>div</code> dans un conteneur <code>display: flex; flex-wrap: wrap; gap: 20px;</code></li>
+            <li>Le bloc “About me” : les blocs de texte et images sont alignés horizontalement et centrés verticalement avec <code>align-items: center;</code></li>
         </ul>
     </p>
 
     <h3>Pièges à éviter</h3>
     <p>
         <ul>
-            <li>Ne pas confondre <code>justify-content</code> (axe principal) et <code>align-items</code> (axe secondaire)</li>
-            <li>Vérifier que les conteneurs flex imbriqués ne perturbent pas la mise en page</li>
-            <li>Éviter de surcharger un conteneur avec trop de propriétés flex</li>
-        </ul>
+        <li>Ne pas confondre <code>justify-content</code> et <code>align-items</code> : j'avais inversé ces propriétés pour la barre “About me”, ce qui décalait le texte.</li>
+        <li>Attention aux conteneurs imbriqués : sur la grille de projets, j’avais oublié <code>flex-wrap: wrap;</code> et les cartes dépassaient du conteneur.</li>
+        <li>Ne pas surcharger un conteneur avec trop de propriétés flex ; garder simple pour faciliter la maintenance.</li>
+    </ul>
     </p>
 
     <h3>Analyse personnelle</h3>
-    <p>
-        Flexbox a beaucoup simplifié mon travail de mise en page. 
-        Je n'utilise plus <code>float</code> ni <code>position: absolute</code> pour créer des grilles ou centrer des blocs. 
-        J'apprécie particulièrement la facilité d'adaptation aux écrans différents. 
-        Je recommande de commencer par de petits exemples avant de combiner plusieurs propriétés.
-    </p>
+   <p>
+    L'utilisation de Flexbox a beaucoup simplifié la mise en page de mon portfolio. 
+    Avant, j'utilisais parfois <code>position: absolute</code> pour centrer ou aligner certains blocs, 
+    ce qui causait souvent des problèmes d'adaptation sur différents écrans. 
+    Avec Flexbox, je peux aligner verticalement et horizontalement les sections “About me” et les cartes projets 
+    de manière beaucoup plus simple et responsive. 
+    J'ai appris qu'il est important de tester chaque conteneur individuellement avant de combiner plusieurs propriétés.
+</p>
 
     <h3>Sources et ressources</h3>
     <p>
