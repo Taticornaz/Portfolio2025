@@ -1,18 +1,31 @@
-html, body {
-  margin: 0;
-  padding: 0;
+:root{
+  --primary: #E43071;
+  --primary-dark: #ac4b6e;
+  --accent: #FFC1D8;
+  --bg: #ffffff;
+  --muted: #555555;
+  --container-width: 1440px;
+  --radius-lg: 30px;
+  --radius-sm: 4px;
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+  --gap-lg: 60px;
 }
 
+/* Global resets and sensible defaults */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: "Poppins", sans-serif; color: #333; background: var(--bg); }
+
+/* Navbar container */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E43071;
+  background-color: var(--primary);
   height: 70px;
-  max-width: 1440px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 32px;
-  box-sizing: border-box;
 }
 
 .left,
@@ -63,96 +76,63 @@ html, body {
   text-decoration: none;
   padding: 8px 12px;
   transition: background 0.3s;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   white-space: nowrap;
 }
 
-.nav-list a:hover {
-  background-color: #ac4b6e;
-  border-radius: 4px;
+.nav-list a:hover { background-color: var(--primary-dark); border-radius: var(--radius-sm); }
+
+/* Boutons réutilisables: base + variantes */
+.promo-btn,
+.overlap-block__button,
+.login-btn,
+.slide-text button {
+  padding: 12px 40px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 16px;
 }
 
-.login-btn {
-  background-color: white;
-  color: #E43071;
-  border: none;
-  padding: 12px 50px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+.login-btn { background: white; color: var(--primary); border: none; padding: 12px 50px; }
+.promo-btn, .overlap-block__button { background: white; color: var(--primary); border: 1px solid var(--primary); }
+.slide-text button { background: var(--primary); color: white; border: none; width: 230px; padding: 14px 36px; }
 
 .promo-section {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 100px;
-  background-color: #fff;
-  gap: 60px;
-  max-width: 1440px;
+  background-color: var(--bg);
+  gap: var(--gap-lg);
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
-.promo-images {
-  position: relative;
-  width: 500px;
-  height: 400px;
-}
+.promo-images { position: relative; width: 500px; height: 400px; }
 
 .image {
   position: absolute;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  -o-object-fit: cover;
-     object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
   width: 300px;
   height: 400px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.image-back {
-  left: 0;
-  top: 0;
-  z-index: 1;
-  width: 340px;
-  height: 399px;
-}
-
-.image-front {
-  left: 200px;
-  top: 150px;
-  z-index: 2;
-  width: 240px;
-  height: 350px;
-}
+.image-back { left: 0; top: 0; z-index: 1; width: 340px; height: 399px; }
+.image-front { left: 200px; top: 150px; z-index: 2; width: 240px; height: 350px; }
 
 .promo-content {
   max-width: 500px;
 }
 
-.promo-content h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
-  color: #E43071;
-  margin-bottom: 10px;
-}
+.promo-content h2 { font-size: 40px; color: var(--primary); margin-bottom: 10px; }
 
-.promo-content p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
-}
+.promo-content p { font-size: 18px; color: var(--muted); margin-bottom: 30px; }
 
-.promo-btn {
-  background-color: white;
-  color: #E43071;
-  border: 1px solid #E43071;
-  padding: 16px 40px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-}
+/* .promo-btn handled above in reusable button rules */
 
 .slider-tabs {
   position: relative;
