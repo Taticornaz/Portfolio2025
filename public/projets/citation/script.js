@@ -1,8 +1,4 @@
-/* ======================================
-   Générateur de Citations Motivantes
-   Projet: Portfolio 2025
-   Description: Affiche une citation aléatoire au clic du bouton
-   ====================================== */
+
 
 // Sélection des éléments DOM
 // - button: le bouton qui déclenche l'affichage des citations
