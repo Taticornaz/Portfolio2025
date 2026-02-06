@@ -1,43 +1,37 @@
-/* Styles du projet: Générateur de Citations Motivantes */
 
-/* Style du corps de la page */
 body {
-    /* Utilise une image de fond pour créer une atmosphère motivante */
     background-image: url("https://i.pinimg.com/736x/e0/3a/72/e03a7261348b3940a97618cb4b1421a6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-/* Conteneur principal - utilise flexbox pour centrer le contenu */
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    height: 100vh;
 }
 
-/* Style du bouton pour déclencher l'affichage des citations */
 #btn {
     background-color: white;
-    border-radius: 50px; /* Bouton arrondi */
+    border-radius: 50px;
     padding: 10px;
     font-size: 30px;
-    border: 1px solid #ff3d68; /* Bordure rose */
-    font-family: "Lobster", sans-serif; /* Police stylisée Lobster */
-    position: fixed; /* Reste fixe au clic */
+    border: 1px solid #ff3d68;
+    font-family: "Lobster", sans-serif;
+    position: fixed;
 }
 
-/* Style du paragraphe affichant la citation */
 #par {
-    display: none; /* Caché par défaut, affiché au clic */
+    display: none;
     font-family: "Lobster", sans-serif;
     font-size: 28px;
     background-color: white;
     margin-top: 500px;
-    padding: 20px; /* Espacement interne */
-    border: 5px solid #78DEC7; /* Bordure turquoise */
-    border-radius: 50px; /* Coins arrondis */
-    width: 70%; /* Largeur relative */
+    padding: 20px;
+    border: 5px solid #78DEC7;
+    border-radius: 50px;
+    width: 70%;
     text-align: center;
 }
