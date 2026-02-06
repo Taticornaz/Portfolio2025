@@ -1,0 +1,57 @@
+/* Responsive rules and utilities */
+
+/* Reviews responsive */
+@media (max-width: 1024px) {
+  .reviews-section { margin: 80px auto; }
+  .reviews-title, .reviews-subtitle { margin-left: 40px; text-align: left; }
+  .reviews-grid { max-width: 90%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 20px 20px; }
+  .review-1, .review-2, .review-3 { width: 100%; height: auto !important; transform: none !important; margin-top: 0 !important; }
+}
+@media (max-width: 600px) {
+  .reviews-section { margin: 50px 15px; }
+  .reviews-title, .reviews-subtitle { margin-left: 0; text-align: center; font-size: 28px; }
+  .reviews-subtitle { margin-bottom: 30px; }
+  .reviews-grid { display: flex; flex-direction: column; gap: 25px; max-width: 100%; }
+  .review-1, .review-2, .review-3 { width: 100% !important; height: auto !important; transform: none !important; margin-top: 0 !important; }
+  .review-header { font-size: 20px; }
+  .review-text { font-size: 16px; }
+  .review-photo { width: 50px; height: 50px; }
+  .review-name { font-size: 16px; }
+  .review-role { font-size: 12px; }
+}
+
+/* App / promo responsive */
+@media (max-width: 1024px) {
+  .promo-section { flex-direction: column; padding: 60px 24px; gap: 30px; }
+  .promo-images { width: 100%; height: auto; min-height: 240px; }
+  .image, .image-back, .image-front { position: relative; left: auto; top: auto; width: 48%; height: auto; z-index: 1; }
+  .image-front { margin-top: 12px; }
+  .promo-content { max-width: 100%; }
+  .overlap-block { flex-direction: column; align-items: center; padding: 40px 20px; }
+  .overlap-block__text { margin: 0 0 20px 0; max-width: 100%; }
+  .overlap-block__images { width: 100%; height: auto; }
+  .reviews-section { margin: 60px 0; }
+  .reviews-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: auto; gap: 20px; max-width: 100%; }
+  .review-2, .review-3 { transform: none; margin-top: 0; }
+  .slide { height: auto; }
+  .slide-text h2 { font-size: 32px; white-space: normal; }
+}
+
+@media (max-width: 600px) {
+  .navbar { padding: 0 12px; }
+  .nav-list { gap: 12px; }
+  .login-btn { padding: 8px 20px; }
+  .promo-section { padding: 32px 12px; }
+  .promo-images { display: block; width: 100%; height: auto; }
+  .image, .image-back, .image-front { width: 100%; height: auto; position: relative; left: auto; top: auto; box-shadow: var(--shadow-lg); }
+  .promo-content h2 { font-size: 26px; }
+  .promo-content p { font-size: 16px; }
+  .slide-text h2 { font-size: 24px; }
+  .slide-text { padding: 0 12px; }
+  .slide-text button, .promo-btn, .login-btn { width: 100%; border-radius: 12px; }
+  .reviews-grid { display: block; padding: 0 12px; }
+  .review { margin-bottom: 16px; }
+}
+
+/* Utilities */
+img, .image, .overlap-block__image { max-width: 100%; height: auto; display: block; }
