@@ -1,0 +1,17 @@
+:root{
+  --primary: #E43071;
+  --primary-dark: #ac4b6e;
+  --accent: #FFC1D8;
+  --bg: #ffffff;
+  --muted: #555555;
+  --container-width: 1440px;
+  --radius-lg: 30px;
+  --radius-sm: 4px;
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+  --gap-lg: 60px;
+}
+
+/* Global resets and sensible defaults */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: "Poppins", sans-serif; color: #333; background: var(--bg); }
