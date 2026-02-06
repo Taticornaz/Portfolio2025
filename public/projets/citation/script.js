@@ -1,13 +1,17 @@
-// Script pour afficher une citation aléatoire au clic
-// Emplacement: public/projets/citation/script.js
-// Fonctionnement: sélectionne un bouton, choisit une citation aléatoire et l'affiche
+/* ======================================
+   Générateur de Citations Motivantes
+   Projet: Portfolio 2025
+   Description: Affiche une citation aléatoire au clic du bouton
+   ====================================== */
 
-// Sélection des éléments DOM: le bouton qui déclenche l'action et
-// le paragraphe où la citation sera affichée
+// Sélection des éléments DOM
+// - button: le bouton qui déclenche l'affichage des citations
+// - par: le paragraphe où la citation sera affichée
 const button = document.querySelector("#btn");
 const par = document.querySelector("#par");
 
-// Tableau des citations disponibles (chaînes en français)
+// Tableau contenant toutes les citations motivantes disponibles
+// Chaque citation est accompagnée de son auteur
 const quotes = [
      "« Je n'ai pas de rêve, j'ai un objectif. » — Harvey Specter",
   "« Les opportunités ne viennent pas à vous — vous les créez. » — Chris Grosser",
@@ -19,11 +23,16 @@ const quotes = [
   "« Quand on te pousse dans un coin, brise le mur. » — Harvey Specter"
 ]
 
-// Écouteur d'événement: au clic, sélectionne et affiche une citation aléatoire
-button.addEventListener("click",() => {
+// Écouteur d'événement au clic du bouton
+button.addEventListener("click", () => {
     // Sélectionne une citation au hasard dans le tableau
+    // Math.random() génère un nombre entre 0 et 1
+    // Math.floor() l'arrondit vers le bas pour obtenir un index valide
     let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    // Rend le paragraphe visible puis insère la citation
+    
+    // Rend le paragraphe visible
     par.style.display = "block";
+    
+    // Insère la citation dans le paragraphe
     par.textContent = randomQuote;
 })
