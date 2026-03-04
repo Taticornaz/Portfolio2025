@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<section id="react-word-cards" class="section fiche-technique">
+  <h2 class="gradient-text">React – Gestion de mots avec des composants</h2>
+
+  <h3>Définition concise</h3>
+  <p>
+    Cette fiche présente comment gérer un état dynamique d'une liste de mots dans React
+    à l'aide de composants, de hooks et de la manipulation d'événements. 
+    L'exemple illustre l'édition en direct de mots et de leurs traductions.
+  </p>
+
+  <h3>Contexte d'utilisation</h3>
+  <p>
+    Cette technique est utile pour : 
+    <ul>
+      <li>Créer des applications interactives avec des listes de données</li>
+      <li>Gérer l'état local avec <code>useState</code></li>
+      <li>Mettre à jour dynamiquement les composants enfants via des props et callbacks</li>
+    </ul>
+  </p>
+
+  <h3>Exemple de code commenté</h3>
+  <pre><code>
+import React, { useState } from 'react';
+import WordCard from '../WordCard/WordCard';
+
+const MainPage = () => {
+  const [words, setWords] = useState([
+    { id: 1, word: 'mot1', translation: 'traduction1' },
+    { id: 2, word: 'mot2', translation: 'traduction2' },
+  ]);
+
+  const handleEdit = (id, updatedWord, updatedTranslation) => {
+    setWords(prevWords =>
+      prevWords.map(word =>
+        word.id === id ? { ...word, word: updatedWord, translation: updatedTranslation } : word
+      )
+    );
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Table des mots&lt;/h1&gt;
+      {words.map(word => (
+        &lt;WordCard key={word.id} word={word} onEdit={handleEdit} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};
+
+export default MainPage;
+  </code></pre>
+
+  <h3>Cas d'usage réel</h3>
+  <p>
+    Dans mon projet LearnWords, j'utilise ce composant pour :
+    <ul>
+      <li>Afficher une liste de mots avec leur traduction</li>
+      <li>Permettre à l'utilisateur de modifier directement les mots existants</li>
+      <li>Maintenir l'état de la liste dans le composant parent et passer des callbacks aux enfants</li>
+    </ul>
+  </p>
+
+   <h3>Analyse personnelle</h3>
+  <p>
+    En développant ce projet, j'ai rencontré un problème concret : j'avais initialement installé React 19,
+    mais certaines dépendances comme <code>@testing-library/react</code> nécessitaient React 18. 
+    Cela a causé des erreurs lors du déploiement sur Netlify (peer dependency conflict). 
+    J'ai dû downgrader React et React-DOM vers la version 18.2.0 et réinstaller toutes les dépendances. 
+    Cette expérience m'a appris à gérer les conflits de versions, vérifier les peer dependencies et tester le build localement avant le déploiement.
+  </p>
+
+  <h3>Pièges à éviter</h3>
+  <ul>
+    <li>Modifier l'état directement au lieu d'utiliser la fonction setState</li>
+    <li>Ne pas passer correctement les callbacks aux composants enfants</li>
+    <li>Oublier la clé unique (<code>key</code>) pour chaque élément dans un <code>map</code></li>
+    <li>Ignorer les conflits de versions entre React et ses dépendances, ce qui peut bloquer le build ou le déploiement</li>
+  </ul>
+
+  <h3>Sources et ressources</h3>
+  <ul>
+    <li><a href="https://react.dev/learn/typescript#typing-usestate" target="_blank">useState - React Docs</a></li>
+    <li><a href="https://react.dev/learn/rendering-lists#why-does-react-need-keys" target="_blank">Lists and Keys - React Docs</a></li>
+    
+  </ul>
+</section>
