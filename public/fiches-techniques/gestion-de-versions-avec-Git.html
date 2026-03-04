@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <section id="git-workflow" class="section fiche-technique">
+
+    <h2 class="gradient-text">Gestion de versions avec Git</h2>
+
+    <h3>Définition concise</h3>
+    <p>
+        Git est un système de gestion de versions qui permet de suivre
+        les modifications du code, collaborer avec d’autres développeurs
+        et revenir à des états antérieurs du projet si nécessaire.
+        Il est essentiel pour organiser le développement de manière sécurisée et structurée.
+    </p>
+
+    <h3>Contexte d'utilisation</h3>
+    <ul>
+        <li>Suivre les modifications du code et pouvoir revenir en arrière</li>
+        <li>Collaborer efficacement avec plusieurs développeurs</li>
+        <li>Organiser le développement en branches pour tester de nouvelles fonctionnalités</li>
+        <li>Documenter l’évolution du projet à travers des messages de commit clairs</li>
+    </ul>
+
+    <h3>Cas d'usage réel</h3>
+    <p>
+        Dans mon projet <strong>Portfolio2025</strong>, j’ai appliqué Git ainsi :
+    </p>
+    <ul>
+        <li>Création d’un dépôt Git local et synchronisation avec GitHub</li>
+        <li>Organisation du développement via des branches : <code>main</code> pour la version stable et <code>feature/nom-feature</code> pour les nouvelles fonctionnalités</li>
+        <li>Commits fréquents avec des messages descriptifs (« Ajout de la fiche workflow », « Correction responsive header »)</li>
+        <li>Merge des branches testées vers <code>main</code> après validation</li>
+    </ul>
+
+    <h3>Pièges à éviter</h3>
+    <ul>
+        <li>Commits trop volumineux ou peu explicites</li>
+        <li>Travailler directement sur la branche principale (<code>main</code>) sans tests</li>
+        <li>Oublier de synchroniser avec le dépôt distant, ce qui crée des conflits</li>
+        <li>Ne pas nettoyer les branches après fusion, ce qui encombre le projet</li>
+    </ul>
+
+    <h3>Analyse personnelle</h3>
+    <p>
+        Au début, je faisais de grands commits globaux qui rendaient
+        le suivi des changements difficile. Après avoir adopté des commits plus petits
+        et descriptifs, la traçabilité s’est nettement améliorée.
+    </p>
+    <p>
+        L’utilisation de branches pour chaque fonctionnalité m’a permis
+        de tester et corriger le code sans impacter la version stable.
+        Cette méthode m’a appris l’importance de la rigueur et de l’organisation
+        dans un projet même de petite taille.
+    </p>
+    <p>
+        Git m’a aussi montré l’intérêt de documenter mon travail :
+        chaque commit devient un résumé de l’évolution du projet.
+    </p>
+
+    <h3>Sources et ressources</h3>
+    <ul>
+        <li>
+            <a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book – Documentation officielle</a>
+        </li>
+        <li>
+            <a href="https://guides.github.com/introduction/git-handbook/" target="_blank">GitHub Guides – Git Handbook</a>
+        </li>
+        <li>
+            <a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian – Git Tutorials</a>
+        </li>
+    </ul>
+
+</section>
