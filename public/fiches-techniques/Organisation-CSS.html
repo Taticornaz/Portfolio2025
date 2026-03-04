@@ -8,36 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
 <section id="organisation-css" class="section fiche-technique">
 
     <h2 class="gradient-text">Organisation CSS et Méthodologie</h2>
 
     <h3>Définition concise</h3>
     <p>
-        L’organisation CSS consiste à structurer le code de manière cohérente et modulable
+        L’organisation CSS consiste à structurer le code de manière claire et modulable
         pour faciliter la maintenance, la réutilisation et l’évolution du projet.
-        Elle repose sur des conventions de nommage, la séparation des responsabilités,
-        et l’utilisation de méthodes éprouvées comme BEM ou SMACSS.
+        Elle repose sur une séparation logique des fichiers et des responsabilités,
+        ainsi que sur des conventions de nommage cohérentes.
     </p>
 
     <h3>Contexte d'utilisation</h3>
     <ul>
         <li>Assurer la cohérence visuelle sur toutes les pages du site</li>
         <li>Faciliter les modifications futures sans casser le design existant</li>
-        <li>Permettre à plusieurs développeurs de collaborer efficacement</li>
+        <li>Permettre une collaboration plus fluide si plusieurs développeurs interviennent</li>
         <li>Optimiser la performance et réduire le code redondant</li>
     </ul>
 
     <h3>Cas d'usage réel</h3>
     <p>
-        Dans mon projet <strong>Portfolio2025</strong>, j’ai organisé le CSS de la manière suivante :
+        Dans mon projet <strong>Portfolio2025</strong>, j’ai organisé le CSS comme suit :
     </p>
     <ul>
-        <li>Fichiers séparés par fonctionnalité : <code>layout.css</code>, <code>components.css</code>, <code>animations.css</code></li>
-        <li>Nommer les classes selon la convention BEM (<code>section-header__title</code>, <code>card__button</code>) pour plus de lisibilité</li>
-        <li>Utiliser des variables CSS pour les couleurs, tailles et marges afin de centraliser la configuration</li>
-        <li>Appliquer Flexbox et Grid de manière modulaire pour chaque section, afin d’éviter les conflits</li>
+        <li>Fichiers séparés par type de contenu : <code>layout.css</code>, <code>components.css</code>, <code>animations.css</code></li>
+        <li>Nomination cohérente des classes pour refléter leur fonction (<code>section-header</code>, <code>card-button</code>)</li>
+        <li>Variables CSS pour couleurs, typographies et marges afin de centraliser les styles</li>
+        <li>Flexbox et Grid utilisés de manière modulaire pour chaque section, ce qui facilite les ajustements</li>
     </ul>
 
     <h3>Pièges à éviter</h3>
@@ -50,30 +49,29 @@
 
     <h3>Analyse personnelle</h3>
     <p>
-        Au début, mon CSS était plat et dispersé, ce qui compliquait la maintenance.
-        En adoptant BEM et en séparant les fichiers par fonctionnalité, j’ai gagné en clarté
-        et en efficacité.
+        Au début, mon CSS était dispersé et peu structuré, ce qui compliquait la maintenance.
+        En séparant les fichiers par type (layout, composants, animations) et en utilisant des noms cohérents,
+        j’ai gagné en lisibilité et facilité d’évolution.
     </p>
     <p>
-        J’ai également appris l’importance de centraliser les variables (couleurs, marges, typographies)
-        pour pouvoir faire des ajustements globaux rapidement.
-        Cette méthodologie m’a permis d’améliorer la cohérence du design
-        et de préparer le site pour des extensions futures.
+        J’ai également appris l’importance des variables pour les couleurs et tailles,
+        ce qui permet de faire des ajustements globaux rapidement
+        sans modifier chaque élément individuellement.
+    </p>
+    <p>
+        Cette approche prépare également le code pour de futures méthodologies comme BEM ou SMACSS,
+        si je décide de les appliquer plus tard.
     </p>
 
     <h3>Sources et ressources</h3>
     <ul>
         <li>
-            <a href="https://css-tricks.com/bem-101/" target="_blank">CSS-Tricks – BEM 101</a>
-        </li>
-        <li>
-            <a href="https://smacss.com/" target="_blank">SMACSS – Scalable and Modular Architecture for CSS</a>
-        </li>
-        <li>
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN – CSS Basics and Best Practices</a>
+        </li>
+        <li>
+            <a href="https://css-tricks.com/snippets/css/organizing-css/" target="_blank">CSS-Tricks – Organizing CSS</a>
         </li>
     </ul>
 
 </section>
-
    
