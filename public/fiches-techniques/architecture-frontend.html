@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,49 +31,77 @@
         </ul>
     </p>
 
-    <h3>Exemple de structure de projet</h3>
-    <pre><code>
+     <h3>Application concrète dans mon portfolio</h3>
+    <p>
+        Dans mon projet <strong>Portfolio2025</strong>, j’ai structuré le dossier <strong>public/</strong>
+        en sous-dossiers distincts : <strong>projets/</strong>, <strong>fiche-technique/</strong>,
+        <strong>reflexion/</strong> et <strong>assets/</strong>.
+        Cette organisation me permet d’ajouter de nouvelles pages sans modifier
+        la structure globale du site.
+    </p>
+
+    <p>
+        Chaque page HTML utilise des balises sémantiques (<code>header</code>, 
+        <code>main</code>, <code>section</code>, <code>footer</code>) pour clarifier
+        la structure du document.  
+        La mise en page repose principalement sur <strong>Flexbox</strong> et <strong>CSS Grid</strong>
+        afin d’assurer une adaptation responsive entre desktop et mobile.
+    </p>
+   
+    <h3>Architecture côté serveur</h3>
+    <p>
+        Le projet utilise un serveur Node.js avec Express (server.js)
+        pour servir les fichiers statiques.  
+        Cette configuration centralise la gestion du projet et prépare
+        une éventuelle évolution vers une application dynamique.
+    </p>
+
+    <h3>Exemple simplifié de structure</h3>
+<pre><code>
 Portfolio2025/
 ├─ public/
-│  ├─ assets/             # Images
-│  ├─ fiche-technique/    # Fiches techniques
-│  ├─ projets/          # Projets exemple
-│  ├─ reflexion/          # Réflexions personnelles
+│  ├─ assets/
+│  ├─ fiche-technique/
+│  ├─ projets/
+│  ├─ reflexion/
 │  ├─ index.html
-│  ├─ index.js
-│  └─ style.css
-├─ .gitignore
-├─ package-lock.json
+│  ├─ style.css
+│  └─ index.js
+├─ server.js
 ├─ package.json
-├─ README.md
-└─ server.js
-    </code></pre>
+└─ README.md
+</code></pre>
 
-    <h3>Bonnes pratiques</h3>
+    <h3>Analyse critique personnelle</h3>
     <p>
-        <ul>
-            <li>Utiliser des dossiers séparés pour HTML, CSS, JS, images et fiches</li>
-            <li>Nommer les fichiers et classes de manière cohérente</li>
-            <li>Structurer le code HTML avec des balises sémantiques (header, nav, main, section, footer)</li>
-            <li>Garder le JavaScript modulable et indépendant du HTML lorsque possible</li>
-            <li>Utiliser Flexbox et Grid pour la mise en page responsive</li>
-        </ul>
+        Lors des premières versions du projet, tous les fichiers HTML
+        étaient placés au même niveau. Cette organisation rendait
+        la navigation et la maintenance difficiles.
     </p>
 
-    <h3>Analyse personnelle</h3>
     <p>
-        En créant mon portfolio, j'ai compris qu'une bonne architecture front-end simplifie énormément la maintenance. 
-        Par exemple, en séparant les fiches techniques et les projets dans des dossiers distincts, je peux ajouter de nouvelles pages 
-        sans toucher aux autres fichiers. L'utilisation des balises sémantiques et de Flexbox/Grid rend mon code plus lisible et plus facile à adapter pour le responsive.
+        Après refactorisation, j’ai regroupé les fichiers par catégories
+        (projets, fiches techniques, réflexions).  
+        Cette restructuration a amélioré la lisibilité du projet
+        et facilité l’ajout de nouveaux contenus.
     </p>
 
-    <h3>Pièges à éviter</h3>
     <p>
-        <ul>
-            <li>Mettre tout le code HTML, CSS et JS dans un seul fichier pour de gros projets</li>
-            <li>Nommer les classes de façon vague ou incohérente</li>
-            <li>Ne pas séparer les responsabilités entre structure (HTML), style (CSS) et comportement (JS)</li>
-        </ul>
+        J’ai également appris l’importance d’anticiper la structure dès le début.
+        Une architecture pensée trop tard peut entraîner une perte de temps
+        et des modifications répétitives.
+    </p>
+
+    <h3>Pièges rencontrés et corrigés</h3>
+    <ul>
+        <li>Structure initiale trop plate (absence de hiérarchie claire)</li>
+        <li>Classes CSS nommées de manière peu cohérente dans les premières versions</li>
+        <li>Manque d’anticipation pour l’évolution future du projet</li>
+    </ul>
+
+    <p>
+        Ces erreurs m’ont permis de comprendre que l’architecture n’est pas
+        un détail technique, mais une base stratégique du développement front-end.
     </p>
 
     <h3>Sources et ressources</h3>
