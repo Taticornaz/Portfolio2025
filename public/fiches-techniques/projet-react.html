@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<section id="projet-phare-learnwords" class="section fiche-technique">
+  <h2 class="gradient-text">Projet LearnWords React</h2>
+
+  <h3>Nom du projet</h3>
+  <p>LearnWords – Application de gestion de vocabulaire en React</p>
+
+  <h3>Contexte</h3>
+  <p>
+    LearnWords est un projet réalisé pour consolider les compétences front-end et back-end :
+    gestion de mots avec traduction et catégorie, ajout, édition et suppression des mots, 
+    interface responsive pour desktop et mobile, déploiement fonctionnel sur Netlify.
+  </p>
+
+  <h3>Technologies et choix techniques</h3>
+  <ul>
+    <li><strong>React 18</strong> : gestion de l’état avec <code>useState</code>, composants réutilisables (WordCard, WordTable, AddWordForm)</li>
+    <li><strong>JavaScript/JSX</strong> : logique métier et manipulation du DOM via React</li>
+    <li><strong>HTML5 / CSS3 / SCSS</strong> : layout responsive avec Flexbox et Grid</li>
+    <li><strong>API</strong> : fetch pour récupération et mise à jour des mots</li>
+    <li><strong>Netlify</strong> : déploiement et hébergement du site</li>
+    <li><strong>Bonnes pratiques</strong> : séparation des composants, noms clairs, commentaires, responsive design</li>
+    <li><strong>Git</strong> : commits réguliers et messages clairs</li>
+  </ul>
+
+  <h4>Problèmes rencontrés et solutions</h4>
+  <ul>
+    <li>Conflit de versions React (19 vs 18) avec <code>@testing-library/react</code> : corrigé en passant à React 18.2.0</li>
+    <li>Peer dependencies npm : utilisé <code>npm install --legacy-peer-deps</code></li>
+    <li>Responsive design : ajustements de Grid et Flexbox pour mobile/tablet</li>
+    <li>Déploiement Netlify : configuration correcte du build command et publish directory</li>
+  </ul>
+
+  <h3>Architecture du projet</h3>
+  <pre><code>
+LearnWords/
+├─ public/
+│  ├─ index.html
+│  └─ assets/
+├─ src/
+│  ├─ components/
+│  │  ├─ WordCard.js
+│  │  ├─ WordTable.js
+│  │  ├─ AddWordForm.js
+│  │  └─ MainPage.js
+│  ├─ App.js
+│  ├─ index.js
+│  └─ styles/
+│     └─ main.scss
+├─ package.json
+└─ README.md
+  </code></pre>
+
+  <h3>Fonctionnalités</h3>
+  <ul>
+    <li>Affichage des mots dans une table et sous forme de cartes</li>
+    <li>Ajout, modification et suppression de mots</li>
+    <li>Validation pour les trois champs : Mot, Traduction, Thème</li>
+    <li>Message d’erreur si l’utilisateur tente d’ajouter un mot avec un champ vide : 
+        <code>"Tous les champs doivent être remplis"</code>
+    </li>
+    <li>Responsive sur desktop, tablette et mobile</li>
+    <li>Gestion des erreurs lors des appels API</li>
+  </ul>
+
+  <h3>Accessibilité (WCAG)</h3>
+  <ul>
+    <li>Boutons et formulaires avec <code>aria-label</code></li>
+    <li>Navigation clavier possible sur les listes de mots</li>
+    <li>Contraste des couleurs suffisant pour la lecture</li>
+  </ul>
+
+  <h3>SEO et performance</h3>
+  <ul>
+    <li>Titres et meta-tags pour chaque page</li>
+    <li>Images avec attribut <code>alt</code></li>
+    <li>Minification via <code>react-scripts build</code></li>
+  </ul>
+
+  <h3>Sécurité</h3>
+  <ul>
+    <li>Validation des inputs pour éviter les injections</li>
+    <li>HTTPS fourni par Netlify</li>
+    <li>Pas de stockage d’informations sensibles côté client</li>
+  </ul>
+
+  <h3>Déploiement</h3>
+  <p>
+    Hébergement sur Netlify : <a href="https://learnwordsreactex.netlify.app" target="_blank">https://learnwordsreactex.netlify.app</a>
+  </p>
+  <p>Commandes locales :</p>
+  <pre><code>
+git clone https://github.com/Taticornaz/my-cards.git
+npm install
+npm start  # pour lancer en local
+npm run build  # pour production
+  </code></pre>
+
+  <h3>Guide d’utilisation</h3>
+  <ol>
+    <li>Ouvrir l’application en local (<code>npm start</code>) ou en ligne (Netlify)</li>
+    <li>Ajouter un mot et sa traduction via le formulaire</li>
+    <li>Cliquer sur une carte pour marquer comme complété</li>
+    <li>Double-clic pour supprimer un mot</li>
+    <li>Les mots sont affichés sous forme de liste et cartes</li>
+  </ol>
+
+  <h3>Ressources externes</h3>
+  <ul>
+    <li><a href="https://react.dev/" target="_blank">React Documentation</a></li>
+    <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a></li>
+    <li><a href="https://docs.netlify.com/" target="_blank">Netlify Docs</a></li>
+  </ul>
+
+  <h3>Analyse personnelle</h3>
+  <p>
+    Projet phare qui a consolidé mes compétences en React, API, déploiement et responsive design.  
+    La gestion des conflits de dépendances npm m’a appris la rigueur dans le versioning.  
+    L’intégration d’accessibilité et SEO montre l’importance de penser à l’utilisateur final dès la conception.  
+    Projet réutilisable et extensible pour futures fonctionnalités.
+  </p>
+</section>
