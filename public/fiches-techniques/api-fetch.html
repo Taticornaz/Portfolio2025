@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="../fiches-techniques.html" class="btn-back">← Retour aux fiches techniques</a>
+
+
+<section id="fetch-api" class="section fiche-technique">
+
+<h2 class="gradient-text">Fetch API</h2>
+
+<h3>Définition concise</h3>
+<p>
+Fetch permet de récupérer des données depuis un serveur sans rechargement de page.
+C'est l'API moderne pour les requêtes HTTP en JavaScript.
+</p>
+
+<h3>Contexte d'utilisation</h3>
+<ul>
+<li>Récupérer des données JSON d'une API</li>
+<li>Envoyer des données au serveur (POST, PUT, DELETE)</li>
+<li>Gestion asynchrone avec async/await ou .then()</li>
+<li>Gérer les erreurs et les réponses</li>
+</ul>
+
+<h3>Cas d'usage réel</h3>
+<p>
+Dans <strong>Portfolio2025</strong>, j'ai utilisé Fetch pour récupérer des données de projets
+et les afficher dynamiquement sans rechargement de page.
+</p>
+
+<h3>Exemple de code</h3>
+<pre><code>
+// Avec async/await
+async function getProjects() {
+  try {
+    const response = await fetch('https://api.example.com/projects');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Erreur:', error);
+  }
+}
+
+// Avec .then()
+fetch('https://api.example.com/projects')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+</code></pre>
+
+<h3>Pièges à éviter</h3>
+<ul>
+<li>Oublier d'appeler .json() sur la réponse</li>
+<li>Ne pas gérer les erreurs avec try/catch ou .catch()</li>
+<li>Utiliser fetch sans vérifier le statut de la réponse</li>
+<li>Faire des appels API trop fréquents sans throttling</li>
+</ul>
+
+<h3>Analyse personnelle</h3>
+<p>
+Fetch a vraiment simplifié la récupération de données dans mes projets.
+C'est beaucoup plus lisible que XMLHttpRequest, et async/await rend le code très clair.
+</p>
+
+<h3>Sources et ressources</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API" target="_blank">MDN – Fetch API</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/Asynchronous/Promises" target="_blank">MDN – Promises</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">MDN – Async/Await</a></li>
+</ul>
+
+</section>
+
+</body>
+
+</html>
