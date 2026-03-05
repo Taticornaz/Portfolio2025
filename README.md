@@ -1,7 +1,7 @@
 # Portfolio2025
 Un site portfolio personnel présentant mes projets, compétences et réflexions.
 
-![Capture d'écran du Portfolio](/Portfolio2025/public/assets/images/myportfolio.png)
+![Capture d'écran du Portfolio](/public/assets/images/myportfolio.png)
 
 ## Description
 Ce portfolio contient :
