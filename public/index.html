@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Tatiana, front-end developer based in Switzerland. Projects built with HTML, CSS, JavaScript and React.">
+
+<meta name="author" content="Tatiana">
+
+<meta property="og:title" content="Tatiana – Frontend Developer Portfolio">
+<meta property="og:description" content="Web developer portfolio with projects in HTML, CSS, JavaScript and React">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +21,7 @@
 <!-- SIDEBAR -->
 <aside class="sidebar">
     <h2 class="logo">MyPortfolio</h2>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
         <a class="item" href="#home">Home</a>
         <a class="item" href="#about">About</a>
         <a class="item" href="#projects">Projects</a>
@@ -73,7 +82,7 @@
        <div class="projects-grid">
          <div class="project-card"> 
             <a href="https://gym-website-23.netlify.app/" target="_blank" rel="noopener noreferrer">
-<img src="/Portfolio2025/public/assets/images/mockupgym.png" alt="mockup gym"> 
+<img src="assets/images/mockupgym.png" alt="mockup gym" loading="lazy"> 
            
             </a>
                <h3>Gym</h3>
@@ -81,38 +90,38 @@
              </div>
 
             <div class="project-card">
-                <a href="/Portfolio2025/public/projets/citation/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="/Portfolio2025/public/assets/images/mockup-citation.png" alt="mockup citation">
+                <a href="projets/citation/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/mockup-citation.png" alt="mockup citation" loading="lazy">
                 </a>
                 <h3>Motivational  Quotes</h3>
                 <p>HTML / CSS/JavaScript</p>
             </div>
 
             <div class="project-card">
-                <a href="/Portfolio2025/public/projets/profile/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="/Portfolio2025/public/assets/images/mockupprofile.png" alt="mockup profile">
+                <a href="projets/profile/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/mockupprofile.png" alt="mockup profile">
                 </a>
                 <h3>Personal profile</h3>
                 <p>HTML /CSS/Tailwind</p>
             </div>
              <div class="project-card">
-                <a href="/Portfolio2025/public/projets/quiz/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="/Portfolio2025/public/assets/images/mockup-quiz.png" alt="mockup quiz">
+                <a href="projets/quiz/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/mockup-quiz.png" alt="mockup quiz">
                 </a>
                 <h3>Quiz</h3>
                 <p>HTML / CSS/JavaScript</p>
             </div>
             
              <div class="project-card">
-                <a href="/Portfolio2025/public/projets/weather/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="/Portfolio2025/public/assets/images/weather-mockup.png" alt="mockup weather">
+                <a href="projets/weather/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/weather-mockup.png" alt="mockup weather">
                 </a>
                 <h3>Weather app</h3>
                 <p>HTML / CSS/JavaScript/API</p>
             </div>
             <div class="project-card">
                 <a href="https://learnwordsreactex.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <img src="/Portfolio2025/public/assets/images/learnwords-mockup.png" alt="mockup learn words">
+                <img src="assets/images/learnwords-mockup.png" alt="mockup learn words">
                 </a>
                 <h3>Learn words app</h3>
                 <p>HTML / CSS/JavaScript/React</p>
@@ -131,26 +140,30 @@
 
         <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true">
         </div>
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
+            <input type="email" id="email" name="email" placeholder="Your email" required aria-required="true">
         </div>
 
         <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <textarea id="message" name="message" placeholder="Your message" required aria-required="true"></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">Send</button>
+        <button type="submit" class="btn-submit" aria-label="Send contact message">Send</button>
     </form>
 </section>
 
 
 
 </main>
+</div>
+<footer class="footer">
+<p>© 2026 Tatiana – Frontend Developer</p>
+</footer>
 <script src="index.js"></script>
 </body>
 </html>

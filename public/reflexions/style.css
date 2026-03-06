@@ -26,7 +26,7 @@ body {
 }
 
 
-h3, h4 {
+h3, h4,h2 {
     color: #5f86cd;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -44,10 +44,7 @@ ul {
     margin-bottom: 15px;
 }
 
-li::before {
-    content: "✔️";
-    margin-right: 8px;
-}
+
 
 
 pre {
@@ -90,4 +87,25 @@ a:hover {
 
 .block-content p {
     margin: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: #5f86cd;
 }

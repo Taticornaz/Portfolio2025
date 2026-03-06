@@ -3,27 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Simple weather application to check temperature, humidity, wind and weather conditions in any city.">
 <title>Weather App</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-    <h1>Weather App 🌤️</h1>
-    <div class="search-box">
-        <input type="text" id="cityInput" placeholder="Enter city name...">
-        <button id="searchBtn">Search</button>
-    </div>
 
-    <div class="weather-card" id="weatherCard" style="display:none;">
-        <h2 id="cityName"></h2>
-        <p id="description"></p>
-        <div class="temp-info">
-            <span id="temp"></span>°C
+    <h1>Weather App 🌤️</h1>
+    <p class="subtitle">Check the weather in any city</p>
+
+    <section class="search-section">
+        <label for="cityInput" class="visually-hidden">Enter city name</label>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." aria-label="City name">
+            <button id="searchBtn" aria-label="Search weather">Search</button>
         </div>
+    </section>
+
+    <div id="loader" class="loader" style="display:none;"></div>
+    <p id="errorMessage" class="error"></p>
+
+    <section class="weather-card" id="weatherCard" aria-live="polite">
+        <h2 id="cityName"></h2>
+        
+        <p id="description"></p>
+        <div class="temp-info"><span id="temp"></span>°C</div>
         <p>Humidity: <span id="humidity"></span>%</p>
         <p>Wind: <span id="wind"></span> m/s</p>
-    </div>
+    </section>
 </div>
+
 
 <script src="index.js"></script>
 </body>

@@ -3,7 +3,8 @@
 @import "./css-modules/components.css";
 @import "./css-modules/responsive.css";
 
-/* End modular style.css — edit modules in css-modules/ */
+
+.nutrition-section {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -194,4 +195,3 @@
 /* Small utility: make images fluid by default */
 img, .image, .overlap-block__image { max-width: 100%; height: auto; display: block; }
 
-/* End responsive improvements */

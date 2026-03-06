@@ -64,3 +64,128 @@ button:hover {
     font-weight: bold;
     margin: 10px 0;
 }
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #5f86cd;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Поиск */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5f86cd;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background-color: #4769a6;
+}
+
+/* Loader */
+.loader {
+    border: 5px solid #eee;
+    border-top: 5px solid #5f86cd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Карточка погоды */
+.weather-card {
+    background-color: #f0f4ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: none;
+}
+
+.weather-card img {
+    width: 80px;
+}
+
+.weather-card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #5f86cd;
+}
+
+.weather-card .temp-info {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.weather-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Ошибки */
+.error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border-radius: 12px;
+}
