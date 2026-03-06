@@ -62,7 +62,7 @@ Ce projet sert de vitrine de mon apprentissage en développement web front-end e
 Installer le projet localement avec npm :
 
 ```bash
-git clone https://github.com/tatia/Portfolio2025.git
+git clone https://github.com/Taticornaz/Portfolio2025.git
 cd Portfolio2025
 npm install 
 npm run start
